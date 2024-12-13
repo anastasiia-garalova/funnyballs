@@ -1,0 +1,9 @@
+Структура:
+index.html
+/js
+	events.js //события
+	functions.js //функции
+	variables.js //переменные
+/img //папка с картинками
+/css
+	style.сss //стили

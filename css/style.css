@@ -1,0 +1,358 @@
+body {
+	margin: 0;
+    
+    background: url(../img/fon_body.png) no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+    position: fixed;
+}
+#content {
+    width: 1000px;
+    height: 1050px;
+    position: relative;
+    left: 19%;
+    margin: 0 auto;
+}
+
+#game-zone {
+	width: 1000px;
+    height: 1000px;
+    background: green;
+    border: 30px solid yellow;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.5s;
+}
+
+#info {
+    width: 1000px;
+    padding: 0 30px;;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1000;
+}
+
+#lifes {
+    float: right;
+    text-align: right;
+}
+
+#stars {
+    float: left;
+    color: #9C27B0;
+    font-size: 30px;
+    padding: 0px 10px 5px;
+}
+
+#flower-stars {
+    width: 30px;
+    height: 30px;
+    float: left;
+    display: none;
+}
+
+#flower-stars img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+#player {
+	width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    left: 900px;
+    text-align: center;
+    z-index: 999;
+    border: 1px solid white;
+}
+/* Фон игрока в зависимости от события*/
+.ArrowUp {
+    background: url("../img/ArrowUp.png");
+}
+
+.ArrowDown{
+    background: url("../img/ArrowDown.png");
+}
+
+.ArrowLeft{
+    background: url("../img/ArrowLeft.png");
+}
+
+.ArrowRight{
+    background: url("../img/ArrowRight.png");
+}
+.boom {
+    background: url("../img/boom.png");
+}
+
+#enemy {
+    width: 100px;
+    height: 100px;
+    background: url("../img/monstr-krosh.png");
+    border-radius: 50px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    text-align: center;
+
+}
+
+#house {
+	width: 200px;
+    height: 200px;
+    background: url("../img/house-pandi-close-start.png");
+    position: absolute;
+    top: 100px;
+    left: 800px;
+    text-align: center;
+    border: 1px solid white;
+}
+
+#let {
+    width: 100px;
+    height: 300px;
+    background: url(../img/let_0.jpg);
+    position: absolute;
+    top: 400px;
+    left: 800px;	
+}
+
+#let1 {
+    width: 200px;
+    height: 100px;
+    background: url(../img/let_1.jpg);
+    position: absolute;
+    top: 800px;
+    left: 700px;
+}
+#let2 {
+    width: 200px;
+    height: 200px;
+    background: url(../img/let_2.jpg);
+    position: absolute;
+    top: 800px;
+    left: 400px;
+}
+
+#let3 {
+    width: 300px;
+    height: 200px;
+    background: url(../img/let_3.jpg);
+    position: absolute;
+    top: 800px; 
+}
+
+#let4 {
+    width: 100px;
+    height: 800px;
+    background: url(../img/let_4.jpg);
+
+}
+
+#let5 {
+    width: 200px;
+    height: 300px;
+    background: url(../img/let_5.jpg);
+    position: absolute;
+    top: 0px;
+    left: 200px;
+
+}
+
+#let6 {
+    width: 200px;
+    height: 300px;
+    background: url(../img/let_6.jpg);
+    position: absolute;
+    top: 400px;
+    left: 200px;
+}
+
+#let7 {
+    width: 200px;
+    height: 400px;
+    background: url(../img/let_7.jpg);
+    position: absolute;
+    top: 100px;
+    left: 500px;
+}
+
+#let8 {
+    width: 200px;
+    height: 100px;
+    background: url(../img/let_8.jpg);
+    position: absolute;
+    top: 600px;
+    left: 500px;
+}
+
+/*==================
+Враг номер 2
+===================*/
+
+#enemys {
+    width: 100px;
+    height: 100px;
+    background: url("../img/monstr-krosh.png");
+    border-radius: 50px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 700px;
+    left: 400px;
+    text-align: center;
+    animation: cycle 4s linear infinite;
+}
+
+@keyframes cycle {
+    0% {top: 700;}
+    50% {top: 1px;}
+    100% {top: 700;}
+    
+}
+
+/*=====================
+Стили с призами с едой
+=======================*/
+.food {
+    width: 50px;
+    height: 50px;
+    
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+}
+
+#food0 {
+    top: 25px;
+    left:825px;
+    background: url("../img/flower.png");
+}
+
+#food1 {
+    top: 925px;
+    left:325px;
+    background: url("../img/flower_pink.png");
+}
+
+#food2 {
+    top: 525px;
+    left: 625px;
+    background: url("../img/flower_yellow.png");
+}
+
+#food3 {
+    top: 125px;
+    left:125px;
+    background: url("../img/flower_pink.png");
+}
+
+/*=====================
+Стили стартового блока и кнопки
+=======================*/
+
+#start-block {
+    width: 1000px;
+    height: 724px;
+    display: block;
+    background: url("../img/startFon.jpg");
+    background-size: contain;
+
+}
+
+#start-knopka {
+    background: #04B431;
+    border: 3px solid #00FF00;
+    border-radius: 30px;
+
+    outline: none;
+    font-size: 60px;
+    font-family: 'Modak', cursive;
+    color: #A901DB; 
+
+    width: 300px;
+    height: 100px;
+    margin: 510px 550px 0 50px; 
+
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#start-knopka:hover {
+    background: #0B610B;
+}
+
+#end {
+    width: 1000px;
+    height: 724px;
+   /* background: url("../img/youwin.jpg") no-repeat;*/
+    background-size: contain;
+    display: block;
+}
+
+.ochki {
+    position: absolute;
+    top: 500px;
+    right: 120px;
+    font-size: 60px;
+    color: #FF9800;
+    border: 4px solid #adaf4c;
+    background: #0d3812;
+}
+
+.status{
+    width: 800px;
+    position: absolute;
+    top: 0px;
+    left: 45px;
+    font-size: 80px;
+    background: red;
+    border: 3px solid #00FF00;
+    border-radius: 30px;
+    outline: none;
+    font-family: 'Modak', cursive;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.pobedili {
+    background: url("../img/youwin.jpg") no-repeat;
+}
+
+.proigrali {
+    background: url("../img/youlose.jpg") no-repeat;
+}
+
+#reloadKnopka {
+    height: 100px;
+    padding: 10px;
+    background: #04B431;
+    border: 3px solid #00FF00;
+    border-radius: 30px;
+    outline: none;
+    font-size: 60px;
+    font-family: 'Modak', cursive;
+    color: #A901DB; 
+    margin: 450px 550px 0 50px; 
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#reloadKnopka :hover {
+    background: #0B610B;
